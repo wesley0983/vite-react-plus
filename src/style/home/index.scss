@@ -1,0 +1,24 @@
+html,body{
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  //背景色一半白一半黄
+  //background: linear-gradient(to right,#FFEDF7 0%, #FFEDF7 65%, #003164 35%, #003164 100%);
+  width: 100vw;
+}
+.home{
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  height: 100vh;
+}
+.left{
+  width: 65%;
+  background-color: #FFEDF7;
+}
+.right{
+  width: 35%;
+  background-color: #003164;
+}
