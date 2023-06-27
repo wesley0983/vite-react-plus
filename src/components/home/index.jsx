@@ -3,34 +3,30 @@ import '/src/style/home/index.scss'
 import SideBar from '../side-bar/index'
 
 export default () => {
-  const [second, setSecond] = useState(0);
-  const [hour, setHour] = useState(1500);
-  const [intervalId, setIntervalId] = useState(null);
+  const [minutes, setMinutes] = useState(25);
+  const [seconds, setSeconds] = useState(0);
+  const [isRunning, setIsRunning] = useState(false);
 
-  const handleCountdown = () => {
-    console.log('wesley function called');
-    if (intervalId) {
-      // 計時器已經在運行中，不需要重複啟動
-      return;
+  useEffect(() => {
+    let intervalId;
+    if (isRunning){
+      setInterval(() => {
+        if (seconds > 0) {
+          setSeconds(seconds - 1);
+        } else if (minutes > 0) {
+          setMinutes(minutes - 1);
+          setSeconds(10);
+        } else {
+          clearInterval(intervalId);
+          // 倒計時結束時的處理
+        }
+      }, 1000)
     }
-    handleSecond()
-  };
+  }, [isRunning, minutes, seconds]);
 
-  const handleSecond = () => {
-    const clockTimer = setInterval(() => {
-      // decrease time left / increase time spent
-      setHour(preCount => preCount -1);
-    }, 1000);
-    console.log(clockTimer)
+  const handleStartTime = () => {
+    setIsRunning(true)
   }
-
-  const stopTimer = () => {
-    if (intervalId) {
-      clearInterval(intervalId);
-      setIntervalId(null);
-    }
-  };
-
 
   return (
     <>
@@ -38,11 +34,11 @@ export default () => {
         <div className="home">
           <div className="left">
             <div className="time">
-              {hour}
+              {minutes} : {seconds}
             </div>
             <div className="bg">
               <div className="circle">
-                <div className="countdown" onClick={handleCountdown}/>
+                <div className="countdown" onClick={handleStartTime}/>
               </div>
             </div>
           </div>
