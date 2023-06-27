@@ -1,4 +1,4 @@
-html,body{
+html, body {
   width: 100%;
   height: 100%;
 }
@@ -8,17 +8,56 @@ html,body{
   //background: linear-gradient(to right,#FFEDF7 0%, #FFEDF7 65%, #003164 35%, #003164 100%);
   width: 100vw;
 }
-.home{
+
+.home {
   display: flex;
   flex-direction: row;
   position: relative;
   height: 100vh;
 }
-.left{
+
+.left {
   width: 65%;
   background-color: #FFEDF7;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .time{
+    text-align: center;
+    font: normal normal bold 90px/90px Roboto;
+    letter-spacing: 0px;
+    color: #FF4384;
+    opacity: 1;
+  }
+  .bg{
+    width: 100%;
+    position: absolute;
+    right: -120px;
+  }
+  .circle {
+    position: absolute;
+    right: 0;
+    top: -120px;
+    background-color: #FF4384;
+    width: 240px;
+    height: 240px;
+    border-radius: 50% 50% 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .countdown{
+      background: url("/src/assets/circle/1x/baseline_play_circle_filled_white_48dp.png");
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+    }
+  }
 }
-.right{
+
+.right {
   width: 35%;
   background-color: #003164;
 }
+
+
