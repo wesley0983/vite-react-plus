@@ -25,23 +25,23 @@ html, body {
   justify-content: center;
   .time{
     text-align: center;
-    font: normal normal bold 90px/90px Roboto;
-    letter-spacing: 0px;
+    font: normal normal bold 80px/80px Roboto;
+    padding-right: 80px;
     color: #FF4384;
     opacity: 1;
   }
   .bg{
     width: 100%;
     position: absolute;
-    right: -120px;
+    right: -140px;
   }
   .circle {
     position: absolute;
     right: 0;
-    top: -120px;
+    top: -140px;
     background-color: #FF4384;
-    width: 240px;
-    height: 240px;
+    width: 280px;
+    height: 280px;
     border-radius: 50% 50% 50% 50%;
     display: flex;
     justify-content: center;
@@ -50,15 +50,16 @@ html, body {
       display: flex;
       justify-content: center;
       align-items: flex-end;
+      padding-left: 15px;
     }
     .countdown{
-      background: url("/src/assets/circle/1x/baseline_play_circle_filled_white_48dp.png");
+      background: url("/src/assets/circle/2x/baseline_play_circle_filled_white_48dp.png");
       background-size: cover;
       width: 50px;
       height: 50px;
     }
     .resert{
-      background: url("/src/assets/stop/1x/baseline_stop_white_24dp.png");
+      background: url("/src/assets/stop/2x/baseline_stop_white_24dp.png");
       background-size: cover;
       width: 15px;
       height: 15px;

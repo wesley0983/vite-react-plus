@@ -1,7 +1,7 @@
 .side{
   position: absolute;
   right: 0;
-  width: 10%;
+  width: 15%;
   //height: 100%;
   height: 100%;
   display: flex;
@@ -10,18 +10,34 @@
   align-items: center;
 
   &__menu {
-    padding-top: 30px;
+    padding-top: 25px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 30%;
-    &__item {
+    &__item__list {
+      background: url("/src/assets/list/2x/baseline_list_white_24dp.png");
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+    }
+    &__item__chart {
+      background: url("/src/assets/chart/2x/baseline_insert_chart_outlined_white_24dp.png");
+      background-size: cover;
+      width: 20px;
+      height: 20px;
+    }
+    &__item__music {
+      background: url("/src/assets/music/2x/baseline_library_music_white_24dp.png");
+      background-size: cover;
+      width: 20px;
+      height: 20px;
     }
   }
-  &__logo{
+  &__text{
     color: #fff;
     writing-mode: vertical-rl;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
   }
 }
 

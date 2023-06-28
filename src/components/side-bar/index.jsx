@@ -4,17 +4,11 @@ export default () => {
     <>
       <div className="side">
         <div className="side__menu">
-          <div className="side__menu__item">
-            <img src="src/assets/list/1x/baseline_list_white_24dp.png" alt=""/>
-          </div>
-          <div className="side__menu__item">
-            <img src="src/assets/chart/1x/baseline_insert_chart_outlined_white_24dp.png" alt=""/>
-          </div>
-          <div className="side__menu__item">
-            <img src="src/assets/music/1x/baseline_library_music_white_24dp.png" alt=""/>
-          </div>
+          <div className="side__menu__item__list"/>
+          <div className="side__menu__item__chart"/>
+          <div className="side__menu__item__music"/>
         </div>
-        <div className="side__logo">
+        <div className="side__text">
           POMODORO
         </div>
       </div>
