@@ -18,7 +18,7 @@ export default () => {
           setSeconds(59);
         } else {
           //最後清除計數器
-          console.log('clear1')
+          console.log('time out clearInterval',intervalId)
           clearInterval(intervalId)
         }
       }, 1000)
@@ -27,8 +27,14 @@ export default () => {
 
   }, [isRunning,minutes,seconds]);
 
-  const handleStartTime = () => {
-    setIsRunning(true)
+  const handleTime = () => {
+    setIsRunning(!isRunning)
+  }
+
+  const handleResertTime =() => {
+    setIsRunning(false)
+    setSeconds(0)
+    setMinutes(25)
   }
 
   return (
@@ -41,7 +47,10 @@ export default () => {
             </div>
             <div className="bg">
               <div className="circle">
-                <div className="countdown" onClick={handleStartTime}/>
+                <div className="mine">
+                  <div className="countdown" onClick={handleTime}/>
+                  <div className="resert" onClick={handleResertTime}/>
+                </div>
               </div>
             </div>
           </div>

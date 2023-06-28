@@ -46,11 +46,22 @@ html, body {
     display: flex;
     justify-content: center;
     align-items: center;
+    .mine{
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+    }
     .countdown{
       background: url("/src/assets/circle/1x/baseline_play_circle_filled_white_48dp.png");
       background-size: cover;
       width: 50px;
       height: 50px;
+    }
+    .resert{
+      background: url("/src/assets/stop/1x/baseline_stop_white_24dp.png");
+      background-size: cover;
+      width: 15px;
+      height: 15px;
     }
   }
 }
