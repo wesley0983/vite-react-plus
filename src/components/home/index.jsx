@@ -10,19 +10,22 @@ export default () => {
   useEffect(() => {
     let intervalId;
     if (isRunning){
-      setInterval(() => {
+      intervalId = setInterval(() => {
         if (seconds > 0) {
           setSeconds(seconds - 1);
         } else if (minutes > 0) {
           setMinutes(minutes - 1);
-          setSeconds(10);
+          setSeconds(59);
         } else {
-          clearInterval(intervalId);
-          // 倒計時結束時的處理
+          //最後清除計數器
+          console.log('clear1')
+          clearInterval(intervalId)
         }
       }, 1000)
     }
-  }, [isRunning, minutes, seconds]);
+    return () => clearInterval(intervalId);
+
+  }, [isRunning,minutes,seconds]);
 
   const handleStartTime = () => {
     setIsRunning(true)
@@ -34,7 +37,7 @@ export default () => {
         <div className="home">
           <div className="left">
             <div className="time">
-              {minutes} : {seconds}
+              {minutes.toString().length > 1 ? minutes : '0' + minutes} : {seconds === 60 ? '00' : seconds.toString().length > 1 ? seconds : '0'+seconds  }
             </div>
             <div className="bg">
               <div className="circle">
