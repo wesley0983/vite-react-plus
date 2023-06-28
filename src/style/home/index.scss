@@ -52,8 +52,14 @@ html, body {
       align-items: flex-end;
       padding-left: 15px;
     }
-    .countdown{
+    .timeStart{
       background: url("/src/assets/circle/2x/baseline_play_circle_filled_white_48dp.png");
+      background-size: cover;
+      width: 50px;
+      height: 50px;
+    }
+    .timeStop{
+      background: url("/src/assets/circle/2x/baseline_pause_circle_filled_white_48dp.png");
       background-size: cover;
       width: 50px;
       height: 50px;

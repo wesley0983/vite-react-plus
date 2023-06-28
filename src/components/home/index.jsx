@@ -48,7 +48,12 @@ export default () => {
             <div className="bg">
               <div className="circle">
                 <div className="mine">
-                  <div className="countdown" onClick={handleTime}/>
+                  <div
+                    className={`${
+                      isRunning ? 'timeStop' : 'timeStart'
+                    }`}
+                    onClick={handleTime}
+                  />
                   <div className="resert" onClick={handleResertTime}/>
                 </div>
               </div>
