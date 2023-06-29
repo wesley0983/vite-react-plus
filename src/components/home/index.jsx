@@ -46,15 +46,21 @@ export default () => {
               {minutes.toString().length > 1 ? minutes : '0' + minutes} : {seconds === 60 ? '00' : seconds.toString().length > 1 ? seconds : '0'+seconds  }
             </div>
             <div className="bg">
-              <div className="circle">
-                <div className="mine">
-                  <div
-                    className={`${
-                      isRunning ? 'timeStop' : 'timeStart'
-                    }`}
-                    onClick={handleTime}
-                  />
-                  <div className="resert" onClick={handleResertTime}/>
+              <div className="bg__border">
+                <div className="bg__border__loading">
+
+                </div>
+
+                <div className="circle">
+                  <div className="mine">
+                    <div
+                      className={`${
+                        isRunning ? 'timeStop' : 'timeStart'
+                      }`}
+                      onClick={handleTime}
+                    />
+                    <div className="resert" onClick={handleResertTime}/>
+                  </div>
                 </div>
               </div>
             </div>
